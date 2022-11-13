@@ -41,7 +41,6 @@ public class Output {
         match(Rank.FIFTH.getCount(), Rank.FIFTH.getAmount(), matchList[Rank.FIFTH.getCount()]);
         match(Rank.FORTH.getCount(), Rank.FORTH.getAmount(), matchList[Rank.FORTH.getCount()]);
 
-        // Rank.SECOND.getCount == 5, Rank.THIRD.getCount == 5
         if (Lottos.getRank(lottoList)) {
             match(Rank.THIRD.getCount(), Rank.THIRD.getAmount(), 0);
             matchBonusBall(Rank.SECOND.getCount(), Rank.SECOND.getAmount(), matchList[Rank.SECOND.getCount()]);
@@ -55,14 +54,6 @@ public class Output {
         match(Rank.FIRST.getCount(), Rank.FIRST.getAmount(), matchList[Rank.FIRST.getCount()]);
 
         return lottoList;
-    }
-
-    private static Integer getTrueOrFalse(boolean hasBonusNumber) {
-        Integer bonusBall = 0;
-        if (!hasBonusNumber) {
-            bonusBall = 1;
-        }
-        return bonusBall;
     }
 
     private static boolean matchNumber(List<Lotto> lottoList, Integer number) {
